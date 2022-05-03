@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes point-down {
+  from,
+  to {
+    transform: translateY(-1em);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-button {
+  position: absolute;
+  bottom: 1em;
+  font-size: 2em;
+  animation: point-down 1s infinite;
+}
+
+@import "./first-session.scss";
+@import "./second-session.scss";
+@import "./third-session.scss";
+@import "./fourth-session.scss";

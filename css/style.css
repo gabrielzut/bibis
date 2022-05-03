@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory; }
+
+body {
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+@keyframes point-down {
+  from,
+  to {
+    transform: translateY(-1em); }
+  50% {
+    transform: translateY(0); } }
+
+.scroll-button {
+  position: absolute;
+  bottom: 1em;
+  font-size: 2em;
+  animation: point-down 1s infinite; }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: black; } }
+
+.first-session {
+  position: relative;
+  scroll-snap-align: start;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/checkedbg.jpg");
+  background-repeat: repeat;
+  background-origin: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .first-session .typewriter h1 {
+    transform: translateY(-1em);
+    overflow: hidden;
+    border-right: 0.25em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    animation: typing 3.5s steps(20, end), blink-caret 0.75s step-end infinite; }
+    @media only screen and (max-width: 318px) {
+      .first-session .typewriter h1 {
+        font-size: 1.5em; } }
+
+.second-session {
+  position: relative;
+  scroll-snap-align: start;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/space.jpg); }
+  .second-session .heart-1 {
+    position: absolute;
+    font-size: 2em;
+    transition: transform 2.5s ease-in-out; }
+    .second-session .heart-1.active {
+      transform: scale(4) rotateZ(45deg); }
+  .second-session .heart-2 {
+    position: absolute;
+    right: 2em;
+    top: 3em;
+    font-size: 2em;
+    transition: transform 1s ease-in-out; }
+    .second-session .heart-2.active {
+      transform: scale(3.5) rotateZ(-30deg); }
+  .second-session .heart-3 {
+    position: absolute;
+    left: 2em;
+    top: 5em;
+    font-size: 2em;
+    transition: transform 1s ease-in-out; }
+    .second-session .heart-3.active {
+      transform: scale(3) rotate(20deg); }
+  .second-session .heart-4 {
+    position: absolute;
+    right: 2em;
+    bottom: 6em;
+    font-size: 2em;
+    transition: transform 1.5s ease-in-out; }
+    .second-session .heart-4.active {
+      transform: scale(3) rotate(20deg); }
+  .second-session .heart-5 {
+    position: absolute;
+    left: 2em;
+    bottom: 4em;
+    font-size: 2em;
+    transition: transform 2s ease-in-out; }
+    .second-session .heart-5.active {
+      transform: scale(3) rotateZ(-10deg); }
+  .second-session .message-1 {
+    transform: translateY(-15vh);
+    font-size: 2em;
+    z-index: 999;
+    transition: opacity 2s ease-in;
+    opacity: 0;
+    color: white; }
+    .second-session .message-1.active {
+      opacity: 1; }
+  .second-session .message-2 {
+    transform: translatey(10vh);
+    font-size: 2em;
+    z-index: 999;
+    transition: opacity 2s ease-in;
+    opacity: 0;
+    color: white; }
+    .second-session .message-2.active {
+      opacity: 1; }
+
+.third-session {
+  position: relative;
+  scroll-snap-align: start;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/duckbg.png");
+  background-repeat: repeat;
+  background-origin: content-box;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center; }
+  .third-session .message-1 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+    animation: point-down 1s infinite; }
+  .third-session .message-2 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+    animation: point-down 1s infinite; }
+
+.fourth-session {
+  position: relative;
+  scroll-snap-align: start;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/wrapbg.jpg); }
+  .fourth-session .baloon-1 {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    font-size: 6em;
+    transition: transform 5s ease-in; }
+    .fourth-session .baloon-1.active {
+      transform: translateY(-80vh); }
+  .fourth-session .baloon-2 {
+    position: absolute;
+    bottom: 80px;
+    left: 2em;
+    font-size: 4em;
+    transition: transform 2s ease-in; }
+    .fourth-session .baloon-2.active {
+      transform: translateY(-80vh); }
+  .fourth-session .baloon-3 {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    font-size: 7em;
+    transition: transform 3s ease-in; }
+    .fourth-session .baloon-3.active {
+      transform: translateY(-80vh); }
+  .fourth-session .baloon-4 {
+    position: absolute;
+    bottom: 40px;
+    right: 0.4em;
+    font-size: 10em;
+    transition: transform 4s ease-in; }
+    .fourth-session .baloon-4.active {
+      transform: translateY(-80vh); }
+  .fourth-session .message-1 {
+    font-size: 20px;
+    text-align: justify;
+    padding: 0 16px; }

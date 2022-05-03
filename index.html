@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      function reveal() {
+        const elements = document.querySelectorAll(".reveal");
 
+        for (const element of elements) {
+          // Adds the "active" class to elements when they are near the top of the screen
+          if (element.getBoundingClientRect().top < window.innerHeight - 150)
+            element.classList.add("active");
+          else element.classList.remove("active");
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+    </script>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title>Te amo ❤️</title>
+  </head>
+  <body>
+    <div class="first-session">
+      <div class="typewriter"><h1>Oi, senhorita INFP.</h1></div>
+      <div class="scroll-button">👇</div>
+    </div>
+    <div class="second-session">
+      <div class="heart-1 reveal">❤️</div>
+      <div class="heart-2 reveal">❤️</div>
+      <div class="heart-3 reveal">❤️</div>
+      <div class="heart-4 reveal">❤️</div>
+      <div class="heart-5 reveal">❤️</div>
+      <div class="message-1 reveal">Eu te amo</div>
+      <div class="message-2 reveal">Daqui até a 🌙</div>
+      <div class="scroll-button">👇</div>
+    </div>
+    <div class="third-session">
+      <div class="message-1">Eu te amo</div>
+      <div class="message-2">🦆davida</div>
+      <div class="scroll-button">👇</div>
+    </div>
+    <div class="fourth-session">
+      <div class="baloon-1 reveal">🎈</div>
+      <div class="baloon-2 reveal">🎈</div>
+      <div class="baloon-3 reveal">🎈</div>
+      <div class="baloon-4 reveal">🎈</div>
+      <div class="message-1">
+        Feliz aniversário, vida! ❤️ </br></br> Que nesse dia e sempre você continue sendo
+        essa pessoa incrível pela qual me apaixonei. Amo muito a sua companhia,
+        e para mim é uma oportunidade estar contigo neste dia tão importante. </br></br>
+        Que Deus te abençoe sempre, minha linda, que você tenha sempre saúde,
+        felicidades, paz e muito sucesso, porque você merece! TE AMO HASTA EL
+        INFINITO! 💞💜
+      </div>
+    </div>
+  </body>
+</html>

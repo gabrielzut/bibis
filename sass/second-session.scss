@@ -1,0 +1,95 @@
+.second-session {
+  position: relative;
+  scroll-snap-align: start;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/space.jpg);
+
+  .heart-1 {
+    position: absolute;
+    font-size: 2em;
+    transition: transform 2.5s ease-in-out;
+
+    &.active {
+      transform: scale(4) rotateZ(45deg);
+    }
+  }
+
+  .heart-2 {
+    position: absolute;
+    right: 2em;
+    top: 3em;
+    font-size: 2em;
+    transition: transform 1s ease-in-out;
+
+    &.active {
+      transform: scale(3.5) rotateZ(-30deg);
+    }
+  }
+
+  .heart-3 {
+    position: absolute;
+    left: 2em;
+    top: 5em;
+    font-size: 2em;
+    transition: transform 1s ease-in-out;
+
+    &.active {
+      transform: scale(3) rotate(20deg);
+    }
+  }
+
+  .heart-4 {
+    position: absolute;
+    right: 2em;
+    bottom: 6em;
+    font-size: 2em;
+    transition: transform 1.5s ease-in-out;
+
+    &.active {
+      transform: scale(3) rotate(20deg);
+    }
+  }
+
+  .heart-5 {
+    position: absolute;
+    left: 2em;
+    bottom: 4em;
+    font-size: 2em;
+    transition: transform 2s ease-in-out;
+
+    &.active {
+      transform: scale(3) rotateZ(-10deg);
+    }
+  }
+
+  .message-1 {
+    transform: translateY(-15vh);
+    font-size: 2em;
+    z-index: 999;
+    transition: opacity 2s ease-in;
+    opacity: 0;
+    color: white;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .message-2 {
+    transform: translatey(10vh);
+    font-size: 2em;
+    z-index: 999;
+    transition: opacity 2s ease-in;
+    opacity: 0;
+    color: white;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
